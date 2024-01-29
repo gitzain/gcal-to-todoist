@@ -1,0 +1,26 @@
+name: Sync Calendar to Todoist
+
+on:
+  schedule:
+    - cron: '1 0 * * *'  # Run at 00:01 every day
+
+jobs:
+  sync-calendar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Replace with your desired Python version
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # Assuming you have a requirements.txt file
+      - name: Run script
+        run: python gcal-to-todoist.py  # Replace with the actual name of your script
+        env:
+          GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
+          TODOIST_API_TOKEN: ${{ secrets.TODOIST_API_TOKEN }}
+          TODOIST_REFRESH_TOKEN: ${{ secrets.TODOIST_REFRESH_TOKEN }}
+          TODOIST_PROJECT_ID: ${{ secrets.TODOIST_PROJECT_ID }}
+          KEY_JSON_CONTENTS: ${{ secrets.KEY_JSON_CONTENTS }}
