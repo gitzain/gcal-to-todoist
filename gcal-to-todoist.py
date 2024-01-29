@@ -2,8 +2,7 @@ import datetime
 import os
 from googleapiclient.discovery import build
 from google.oauth2.service_account import Credentials
-from todoist_api_python.api import TodoistAPI  # Import for todoist-api-python
-import base64
+from todoist_api_python.api import TodoistAPI
 import json
 
 # Environment variables
