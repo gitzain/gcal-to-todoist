@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: '1 0 * * *'  # Run at 00:01 every day
 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags' 
+
 jobs:
   sync-calendar:
     runs-on: ubuntu-latest
