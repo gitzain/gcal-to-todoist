@@ -58,8 +58,8 @@ else:
                 task = api.add_task(
                     content=summary,
                     project_id=TODOIST_PROJECT_ID,
-                    due_datetime=due_date if due_date else None,
-                    priority=1
+                    priority=1,
+                    due_datetime=due_date if due_date else None
                 )
         except Exception as error:
             print(error)
