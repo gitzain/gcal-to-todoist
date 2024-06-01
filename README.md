@@ -5,6 +5,8 @@ This script enables users to automatically transfer events from their Google Cal
 ## Table of content
 - [Motivation](#motivation)
 - [Installation & Usage](#installation--usage)
+    - [Installation](#installation)
+    - [Usage](#usage)
 - [Contributing](#contributing)
 - [History](#history)
 - [Credits](#credits)
