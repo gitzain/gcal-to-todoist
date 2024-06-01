@@ -1,4 +1,4 @@
-# Template-README
+# gcal-to-todoist
 This script enables users to automatically transfer events from their Google Calendar to their Todoist task list, enhancing productivity and task management efficiency.
 
 
